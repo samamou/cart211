@@ -1,4 +1,5 @@
 const translate = document.querySelectorAll(".translate");
+const section1 = document.querySelectorAll(".section1");
 const big_title = document.querySelector(".big-title");
 const header = document.querySelector("header");
 const shadow = document.querySelector(".shadow");
@@ -32,3 +33,4 @@ window.addEventListener('scroll', () => {
 
     border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
 })
+
