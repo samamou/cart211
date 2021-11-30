@@ -3,12 +3,18 @@
 
 /* This is for the background cover to be the right size */
 html{
+    box-sizing: border-box;
+
     background: url(img/bavkground1.png) no-repeat center center ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 
 /* the * targets all elements */
