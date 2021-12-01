@@ -1,36 +1,61 @@
-const translate = document.querySelectorAll(".translate");
-const section1 = document.querySelectorAll(".section1");
-const big_title = document.querySelector(".big-title");
-const header = document.querySelector("header");
-const shadow = document.querySelector(".shadow");
-const content = document.querySelector(".content");
-const section = document.querySelector("section");
-const image_container = document.querySelector(".imgContainer");
-const opacity = document.querySelectorAll(".opacity");
-const border = document.querySelector(".border");
+//bezier object
+const fallPath = {
+    //amount of curviness 
+    curviness: 0.255,
+    // autoRotate: true, 
+    //array of the points (objects) we want to animate to  (x left,y) 
+    //create a tween and animate along this path
 
-let header_height = header.offsetHeight;
-let section_height = section.offsetHeight; 
+    //negative y is top, positive is down
+    values: [
+        {x:0, y: 0},
+        {x:-10, y: 100},
+        {x:-20, y: 150},
+        {x:-10, y: 200},
+        {x:0, y: 250},
+        {x:10, y: 350},
+        {x:20, y: 400},
+        {x:10, y: 450},
+        {x:0, y: 450},
 
-window.addEventListener('scroll', () => {
-    let scroll = window.pageYOffset;
-    let sectionY = section.getBoundingClientRect();
-    
-    translate.forEach(element => {
-        let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
-    });
+    ]
+};
 
-    opacity.forEach(element => {
-        element.style.opacity = scroll / (sectionY.top + section_height);
+
+//create a tween and animate along this path
+const tween = new TimelineLite();
+
+tween.add(
+    TweenLite.to(".me", 1 , {
+    //animate with bezier plugin
+     bezier: fallPath, 
+     ease: Power1.easeInOut   
     })
+);
 
-    big_title.style.opacity = - scroll / (header_height / 2) + 1;
-    shadow.style.height = `${scroll * 0.5 + 300}px`;
 
-    content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
-    image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
+//here is a trigger ScrollMagic scene for multiple elements..
 
-    border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
-})
 
+// how to make this ^ affected by scrolling (ScrollMagic gsap plugin)
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+    triggerElement: '.animation',
+    duration: 5000,
+    offset: 200,
+    //when it reaches the end of the animation section, triggers 
+    triggerHook: 0
+} ) 
+    .setTween(tween)
+    // .addIndicators()
+    //stuck here 
+    .setPin('.animation')
+    .addTo(controller);
+
+// IN THE FUTURE, should maybe use .each function to
+// loop thruogh each scene and create a new ScrollMagic scene for each one 
+
+
+
+/////////////////////// TWO /////////////////////

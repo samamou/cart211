@@ -1,167 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,footer, section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header h1{
+    font-size: 60px;
+    color: beige;
+}
+
+header{
+    background-color: #40191C;
+}
+
+
+.animation {
+    height: 400vh;
+    background-image: linear-gradient(
+        to top,
+        #C30E0E 0%, 
+        #1F1C1F 20%, 
+        #821415 50%, 
+        #40191C 100%
+        );
+    position:relative;
+    overflow: hidden;
+}
+
+.me{
+ /* height: 100x; */
+ position: absolute;
+ /* display: flex; */
+  z-index: 4;
+  top: 0%;
+  
+}
+
+.trees1{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     top: 0%;
+    opacity: 20%;
+    z-index: 3;
+
+}
+
+.trees2{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     top: 0%;
+     /* right: 50%; */
+     opacity: 20%;
+     z-index: 2;
+}
+
+.trees3{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* bottom: 20%; */
+      left: 80%; 
+     opacity: 5%;
+}
+
+   
+
+
 
 /* This is for the background cover to be the right size */
-html{
-    box-sizing: border-box;
-
+/* html{
     background: url(img/bavkground1.png) no-repeat center center ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
+} */
 
 /* the * targets all elements */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+  /* *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+
+
 
 /* font */
-body{
+/* body{
     font-family: 'Futura', sans-serif;
 }
 
-/* .container{
-    max-width: 100rem;
-    padding: 0 2rem;
-    margin: 0 auto;
-} */
-
-
-
-.section1{
-    width: 100%;
-    height: 100vh;
-    position: cover; 
-     overflow: hidden;
-}
-
 .me{
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky; 
     position: sticky;
     top: 0;
-}
-
-
-/* .mountain1{
-    /* bottom: -100px;
-    width: 1500px;
-    right: 0;
-    z-index: 19; 
 } */
-
-.sun{
-    position: absolute;
-    bottom: -10px;
-    left: -90px;
-    z-index: 40;
-}
-
-/* .mountain2{
-    /* position: ;
-    width: 1100px;
-    bottom: -50px;
-    left: -20px;
-    z-index: 18; 
-}  */ 
-
-
-
-nav .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* .logo{
-    color: #fff;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-} */
-
-.bar:before, .bar:after{
-    content: '';
-    position: absolute;
-    width: 1.55rem;
-    height: 3px;
-    right: 0;
-    background-color: #fff;
-    border-radius: 2px;
-}
-
-.bar:before{
-    transform: translateY(-8px);
-}
-
-.bar:after{
-    transform: translateY(8px);
-}
-
-.big-title{
-    position: absolute;
-    z-index: 30;
-    line-height: 4rem;
-    top: calc(50% - 2rem);
-    width: 100%;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 600;
-    color: #fff;
-}
-
-section{
-    width: 100%;
-    /* background-color: #151515; */
-    position: relative;
-}
-
-section .container{
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-
-
-section img{
-    width: 100%;
-}
-
-section .container > *{
-    margin: 1rem;
-}
-
-.content{
-    color: #fff;
-    transform: translateY(-50px);
-}
-
-.imgContainer{
-    transform: translateY(50px);
-}
-
-.title{
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: .5rem;
-    position: relative;
-}
-
-
-.opacity{
-    opacity: 100;
-}
