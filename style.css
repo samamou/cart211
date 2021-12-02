@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+html{
+    scroll-behavior:smooth !important;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +11,7 @@
 }
 
 header,footer, section{
+    
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,28 +19,48 @@ header,footer, section{
     font-family: 'Montserrat', sans-serif;
 }
 
-header h1{
+header, h1{
+
     font-size: 60px;
     color: beige;
+    
 }
 
 header{
-    background-color: #40191C;
+    background-color: #ff999b;
+}
+
+footer{
+    background-color: #ffb199;
+}
+
+a:link{
+    text-decoration: none;
 }
 
 
+
+
 .animation {
-    height: 400vh;
+    height: 150vh;
     background-image: linear-gradient(
-        to top,
-        #C30E0E 0%, 
-        #1F1C1F 20%, 
-        #821415 50%, 
-        #40191C 100%
+
+        to top,  #ff0808 0%, #ff999b 100%
         );
     position:relative;
     overflow: hidden;
 }
+
+.animation1 {
+    height: 150vh;
+    background-image: linear-gradient(
+        to bottom, #ff0808 0%,  #ff0844 20%, #ffb199 100%
+
+        );
+    position:relative;
+    overflow: hidden;
+}
+
 
 .me{
  /* height: 100x; */
@@ -45,6 +70,15 @@ header{
   top: 0%;
   
 }
+
+.me2{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     z-index: 3;
+     top: 0%;
+     
+   }
 
 .trees1{
     /* height: 100x; */
@@ -98,7 +132,86 @@ header{
 
 }
 
+
+
+.trees1{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* top: 10%; */
+    opacity: 20%;
+    zoom: 1;
+    z-index: 2;
+    top: 2%;
+
+
+}
+
+.mountains3{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* top: 0%; */
+     /* right: 50%; */
+     opacity: 20%;
+     z-index: 1;
+     zoom: 1;
+     top: 5%;
+
+}
+
+.mountains2{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* bottom: 20%; */
+     left: 70%; 
+     opacity: 50%;
+     zoom: 1.1;
+     z-index: 4;
+     top: 5%;
+
+}
+
+.mountains1{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* bottom: 20%; */
+     right: 60%; 
+     opacity: 50%;
+     zoom: 1.2;
+     z-index: 4;
+     top: 5%;
+
+}
+
+.fish{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* bottom: 20%; */
+     right: 60%; 
+     opacity: 50%;
+     zoom: 1.2;
+     /* z-index: 4; */
+     top: 5%;
+}
    
+.fish2{
+    /* height: 100x; */
+    position: absolute;
+    /* display: flex; */
+     /* bottom: 20%; */
+     right: 60%; 
+     opacity: 50%;
+     zoom: 1.2;
+     /* z-index: 4; */
+     top: 10%;
+}
+
+
+
 .p1{
  color: beige;
  z-index: 5;
@@ -137,3 +250,44 @@ header{
     position: sticky;
     top: 0;
 } */
+
+
+
+/* pulsating blob */ 
+
+.blob {
+	/* background: #ffb199; */
+	border-radius: 50%;
+	margin: 20px;
+	height: 100px;
+	width: 100px;
+
+	box-shadow: 0 0 0 0 #ff0808;
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 #ffffff;
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+/* pulsating blob */ 
+
+
+/* pulsating lines */ 
+
+
+/* pulsating blob */ 

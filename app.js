@@ -186,30 +186,212 @@ const scene4 = new ScrollMagic.Scene({
 
 ////////////////// me again ////////////////////////
 
-// const p1 = {
+
+const fallPath2 = {
+    curviness: 0.255,
+    values: [
+        {x:0, y: 0},
+        {x:-10, y: 100},
+        {x:-20, y: 150},
+        {x:-10, y: 200},
+        {x:0, y: 250},
+        {x:-10, y: 200},
+        {x:-20, y: 150},
+
+    ]
+};
+
+const tweenfallPath2 = new TimelineLite();
+
+tweenfallPath2.add(
+    TweenLite.to(".me2", 1 , {
+    //animate with bezier plugin
+     bezier: fallPath2, 
+     ease: Power1.easeInOut   
+    })
+);
+
+const controllerfallPath2 = new ScrollMagic.Controller();
+
+const scenefallPath2 = new ScrollMagic.Scene({
+    triggerElement: '.animation1',
+    duration: 5000,
+    offset: 200,
+    //when it reaches the end of the animation section, triggers 
+    triggerHook: 0
+} ) 
+    .setTween(tweenfallPath2)
+    // .addIndicators()
+    //stuck here 
+    .setPin('.animation1',400)
+    .addTo(controllerfallPath2);
+
+// IN THE FUTURE, should maybe use .each function to
+// loop thruogh each scene and create a new ScrollMagic scene for each one 
+
+
+/////////////////////// fish /////////////////////
+
+const fishPath = {
+    autoRotate: true, 
+    curviness: 0.5,
+    values: [
+        {x:0, y: 0},
+        {x:500, y: 200},
+        {x:1000, y: 150},
+
+    ]
+};
+
+const tweenfishPath = new TimelineLite();
+
+tweenfishPath.add(
+    TweenLite.to(".fish", 3 , {
+     bezier: fishPath, 
+     ease: Power1.easeInOut   
+    })
+);
+
+const controllerfishPath = new ScrollMagic.Controller();
+
+const scenefishPath = new ScrollMagic.Scene({
+    triggerElement: '.animation1',
+    duration: -5000,
+    offset: 300,
+    triggerHook: 0
+} ) 
+    .setTween(tweenfishPath)
+    .addTo(controllerfishPath);
+
+
+/////////////////////// fish2 /////////////////////
+
+const fish2Path = {
+    autoRotate: true, 
+    curviness: 0.55,
+    values: [
+        {x:0, y: 0},
+        {x:500, y: 200},
+        {x:3000, y: 250},
+
+
+        // {x:1000, y: 400},
+    ]
+};
+
+const tweenfish2Path = new TimelineLite();
+
+tweenfish2Path.add(
+    TweenLite.to(".fish2", 3 , {
+     bezier: fish2Path, 
+     ease: Power1.easeInOut   
+    })
+);
+
+const controllerfish2Path = new ScrollMagic.Controller();
+
+const scenefish2Path = new ScrollMagic.Scene({
+    triggerElement: '.animation1',
+    duration: -5000,
+    offset: 200,
+    triggerHook: 0
+} ) 
+    .setTween(tweenfish2Path)
+    .addTo(controllerfish2Path);
+
+    
+
+
+// /////////////////////// Trees 2 /////////////////////
+
+// const tree2Path = {
 //     curviness: 0.255,
 //     values: [
 //         {x:0, y: 0},
-//         {x:200, y: 0},
+//         {x:-100, y: 0},
 //     ]
 // };
 
-// const tweenp1 = new TimelineLite();
+// const tween2 = new TimelineLite();
 
-// tweenp1.add(
-//     TweenLite.to(".p1", 1 , {
-//      bezier: p1, 
+// tween2.add(
+//     TweenLite.to(".trees2", 1 , {
+//      bezier: tree2Path, 
 //      ease: Power1.easeInOut   
 //     })
 // );
 
-// const controllerp1 = new ScrollMagic.Controller();
+// const controller2 = new ScrollMagic.Controller();
 
-// const scenep1 = new ScrollMagic.Scene({
+// const scene2 = new ScrollMagic.Scene({
 //     triggerElement: '.animation',
 //     duration: 5000,
 //     offset: 200,
 //     triggerHook: 0
 // } ) 
-//     .setTween(tweenp1)
-//     .addTo(controllerp1);
+//     .setTween(tween2)
+//     .addTo(controller2);
+
+
+// /////////////////////// Trees 3 /////////////////////
+
+// const tree3Path = {
+//     curviness: 0.255,
+//     values: [
+//         {x:800, y: 50},
+//         {x:850, y: 100},
+//     ]
+// };
+
+// const tween3 = new TimelineLite();
+
+// tween3.add(
+//     TweenLite.to(".trees3", 1 , {
+//      bezier: tree3Path, 
+//      ease: Power1.easeInOut   
+//     })
+// );
+
+// const controller3 = new ScrollMagic.Controller();
+
+// const scene3 = new ScrollMagic.Scene({
+//     triggerElement: '.animation',
+//     duration: 5000,
+//     offset: 200,
+//     triggerHook: 0
+// } ) 
+//     .setTween(tween3)
+//     .addTo(controller3);
+
+
+// /////////////////////// Trees 4 /////////////////////
+
+// const tree4Path = {
+//     curviness: 0.255,
+//     values: [
+//         {x:-800, y: 50},
+//         {x:-700, y: 100},
+//     ]
+// };
+
+// const tween4 = new TimelineLite();
+
+// tween4.add(
+//     TweenLite.to(".trees4", 1 , {
+//      bezier: tree4Path, 
+//      ease: Power1.easeInOut   
+//     })
+// );
+
+// const controller4 = new ScrollMagic.Controller();
+
+// const scene4 = new ScrollMagic.Scene({
+//     triggerElement: '.animation',
+//     duration: 5000,
+//     offset: 200,
+//     triggerHook: 0
+// } ) 
+//     .setTween(tween4)
+//     .addTo(controller4);
+
+
