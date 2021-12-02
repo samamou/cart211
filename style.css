@@ -22,7 +22,8 @@ header, h1{
 
     font-size: 60px;
     color: beige;
-    
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 header{
@@ -201,6 +202,8 @@ a:link{
  height: 120vh;
  font-family: 'Montserrat', sans-serif;
  top: 0%;
+ padding-left: 10%;
+ padding-right: 10%;
 }
 
 
