@@ -1,3 +1,4 @@
+
 html{
     scroll-behavior:smooth !important;
 }
@@ -189,10 +190,9 @@ a:link{
 .floor{
     position: absolute;
      opacity: 50%;
-     zoom: 1.5;
-     top: 0%;   
+     zoom: 1;
+     top: 10%;   
 }
-
 
 
 .p1, .p2, .p3{
