@@ -196,14 +196,37 @@ a:link{
 }
 
 
-.p1, .p2, .p3{
+.p1 {
  color: beige;
  z-index: 5;
  height: 120vh;
  font-family: 'Montserrat', sans-serif;
  top: 0%;
- padding-left: 10%;
- padding-right: 10%;
+ padding-left: 5%;
+ padding-right: 50%;
+}
+
+.p2 {
+    color: beige;
+    z-index: 5;
+    height: 120vh;
+    font-family: 'Montserrat', sans-serif;
+    top: 0%;
+    padding-left: 5%;
+    padding-right: 50%;
+
+   }
+}
+
+
+.p3{
+    color: beige;
+    z-index: 5;
+    height: 120vh;
+    font-family: 'Montserrat', sans-serif;
+    top: 0%;
+    padding-left: 5%;
+    padding-right: 50%;
 }
 
 
@@ -226,10 +249,13 @@ a:link{
 .blob {
 	border-radius: 50%;
 	margin: 20px;
-	height: 100px;
-	width: 100px;
-
-	box-shadow: 0 0 0 0 #ff0808;
+	height: 150px;
+	width: 150px;
+    font-size: 30px;
+    padding-top: 40px;
+    color: azure;
+    text-align: center;
+    box-shadow: 0 0 0 0 #ff0808;
 	transform: scale(1);
 	animation: pulse 2s infinite;
 }
