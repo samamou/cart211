@@ -202,8 +202,7 @@ a:link{
  height: 120vh;
 /*  font-family: 'Montserrat', sans-serif;
  */
-
- font-family: 'Consolas', monospace;
+ font-family: 'Courier New', monospace;
 
  top: 0%;
  padding-left: 5%;
@@ -214,7 +213,7 @@ a:link{
     color: beige;
     z-index: 5;
     height: 120vh;
-    font-family: 'Montserrat', sans-serif;
+ font-family: 'Courier New', monospace;
     top: 0%;
     padding-left: 5%;
     padding-right: 50%;
@@ -227,7 +226,7 @@ a:link{
     color: beige;
     z-index: 5;
     height: 120vh;
-    font-family: 'Montserrat', sans-serif;
+ font-family: 'Courier New', monospace;
     top: 0%;
     padding-left: 5%;
     padding-right: 50%;
