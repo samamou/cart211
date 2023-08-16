@@ -200,7 +200,11 @@ a:link{
  color: beige;
  z-index: 5;
  height: 120vh;
- font-family: 'Montserrat', sans-serif;
+/*  font-family: 'Montserrat', sans-serif;
+ */
+
+ font-family: 'Consolas', monospace;
+
  top: 0%;
  padding-left: 5%;
  padding-right: 50%;
